@@ -1,23 +1,22 @@
-# 🕸️ Amazon Product Scraper with Bun + TypeScript + Vite
+🕸️ Amazon Product Scraper with Bun + TypeScript + Vite
+This project is a full-stack web scraper that fetches product listings from the first page of Amazon search results using a keyword. It uses Bun, TypeScript, Express, Axios, JSDOM, and Vite (Vanilla JS) for the frontend.
 
-This project is a full-stack web scraper that fetches product listings from the first page of Amazon search results using a keyword. It uses **Bun**, **TypeScript**, **Express**, **Axios**, **JSDOM**, and **Vite** (Vanilla JS) for the frontend.
+📦 Technologies Used
+Bun
 
----
+TypeScript
 
-## 📦 Technologies Used
+Express (Bun-compatible)
 
--   [Bun](https://bun.sh/)
--   TypeScript
--   Express (Bun-compatible)
--   Axios
--   JSDOM
--   Vite (for frontend)
--   Vanilla JavaScript
+Axios
 
----
+JSDOM
 
-## 📁 Project Structure
+Vite (for frontend)
 
+Vanilla JavaScript
+
+📁 Project Structure
 project-root/
 │
 ├── backend/
@@ -34,50 +33,37 @@ project-root/
 ├── vite.config.js
 ├── bunfig.toml
 └── README.md
+🚀 How to Run the Application
 
-yaml
-Copiar
-Editar
+1. Clone the Repository
+   Bash
 
----
-
-## 🚀 How to Run the Application
-
-### 1. Clone the Repository
-
-```bash
 git clone https://github.com/your-user/amazon-scraper-bun.git
-cd amazon-scraper-bun
-2. Install Backend Dependencies
-bash
-Copiar
-Editar
+cd amazon-scraper-bun 2. Install Backend Dependencies
+Bash
+
 cd backend
-bun install
-3. Install Frontend Dependencies
-bash
-Copiar
-Editar
+bun install 3. Install Frontend Dependencies
+Bash
+
 cd ../frontend
 bun create vite
 bun install
 Or if you already have index.html, main.js, and style.css, no need to recreate via Vite.
 
 4. Run Backend Server
-bash
-Copiar
-Editar
+   Bash
+
 cd backend
 bun run index.ts
-It will start the API on http://localhost:3000
+It will start the API on http://localhost:3000.
 
 5. Serve the Frontend
-bash
-Copiar
-Editar
+   Bash
+
 cd ../frontend
 bun run dev
-It will serve the frontend on http://localhost:5173
+It will serve the frontend on http://localhost:5173.
 
 🔍 How It Works
 Backend
@@ -102,7 +88,7 @@ Input field for the search keyword
 
 Button to trigger the scraping
 
-Makes AJAX request to backend
+Makes an AJAX request to the backend
 
 Displays product info in a grid/list format
 
@@ -111,17 +97,16 @@ Search for "headphones" using the frontend input.
 
 The backend will return data like:
 
-json
-Copiar
-Editar
+JSON
+
 [
-  {
-    "title": "Headphones XYZ",
-    "rating": "4.5 out of 5",
-    "reviews": "2,345",
-    "image": "https://example.com/image.jpg"
-  },
-  ...
+{
+"title": "Headphones XYZ",
+"rating": "4.5 out of 5",
+"reviews": "2,345",
+"image": "https://example.com/image.jpg"
+},
+...
 ]
 ❗ Notes
 Amazon may block frequent requests. Consider using proxies or Puppeteer for production use.
@@ -132,6 +117,3 @@ This project is for educational purposes only.
 The backend returns 500 with JSON { error: "Message" } if scraping fails.
 
 The frontend handles and displays error messages cleanly.
-
-
-```
